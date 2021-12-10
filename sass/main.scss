@@ -1,0 +1,153 @@
+@import './colors';
+@import './components';
+@import './mixins';
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 62.5%; //10px
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Nunito', sans-serif;
+	font-size: 1.6rem;
+}
+
+// NAVIGATION
+.burger-btn {
+	position: fixed;
+	top: 15px;
+	right: 20px;
+	padding: 1em;
+	background: none;
+	border: 1px solid transparent;
+	cursor: pointer;
+	z-index: 1000;
+
+	&:hover {
+		.burger-btn__bars::before,
+		.burger-btn__bars::after {
+			width: 100%;
+		}
+	}
+
+	&:focus {
+		outline: none;
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		border-radius: 8px;
+	}
+
+	&__box {
+		position: relative;
+		width: 40px;
+		height: 30px;
+	}
+
+	&__bars,
+	&__bars::before,
+	&__bars::after {
+		@include burgerBtn;
+	}
+
+	&__bars {
+		width: 100%;
+
+		&:before {
+			top: 13.5px;
+			width: 60%;
+		}
+
+		&:after {
+			top: 26.5px;
+			width: 30%;
+			transition-delay: 0.1s;
+		}
+	}
+}
+
+// HEADER
+.header {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 2em;
+	height: 80vh;
+	text-align: center;
+	color: $pure-white;
+	@include heroImages('../img/hero_640.jpg');
+	background-attachment: scroll;
+
+	&__heading {
+		font-family: 'Courgette', cursive;
+		font-size: 4.2rem;
+		font-weight: 300;
+	}
+
+	&__text {
+		margin-top: 0.6em;
+		font-size: 1.6rem;
+	}
+
+	&__btn {
+		margin-top: 2em;
+		padding: 0.8em 1.6em;
+		font-size: 1.4rem;
+		background-color: $pure-white;
+		color: $dark;
+		border: none;
+		border-radius: 10px;
+		text-decoration: none;
+		text-transform: uppercase;
+		cursor: pointer;
+
+		&::before {
+			background-color: $light-white;
+		}
+	}
+}
+
+// MEDIA
+@media (min-width: 768px) {
+	.white-block {
+		height: 51px;
+		width: 45%;
+	}
+
+	.header {
+		&__heading {
+			font-size: 6.6rem;
+		}
+
+		&__text {
+			font-size: 2rem;
+		}
+
+		&__btn {
+			font-size: 1.6rem;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.burger-btn {
+		top: 45px;
+		right: 50px;
+	}
+
+	.header {
+		background-image: $sun-gradient, url('../img/hero_1920.jpg');
+
+		&__heading {
+			font-size: 8.4rem;
+		}
+	}
+}
