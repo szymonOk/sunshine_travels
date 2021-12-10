@@ -78,7 +78,70 @@ body {
   font-size: 1.6rem;
 }
 
-.burger-btn {
+.nav__container {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: linear-gradient(215deg, #836f0b 0%, #af470a 74%);
+  z-index: 100;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1), -webkit-transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.nav__container--active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.nav__item {
+  position: relative;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2.8rem;
+  padding: 0.5em 2em;
+  margin: 0.5em 0;
+}
+
+.nav__item::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  bottom: 0.3em;
+  left: 1.5em;
+  border-bottom: 3px solid white;
+  border-left: 3px solid white;
+  -webkit-transition: width 0.3s, height 0.3s, opacity 0.3s;
+  transition: width 0.3s, height 0.3s, opacity 0.3s;
+}
+
+.nav__item:hover::before {
+  width: 15px;
+  height: 15px;
+  opacity: 1;
+}
+
+.nav__btn {
   position: fixed;
   top: 15px;
   right: 20px;
@@ -89,24 +152,24 @@ body {
   z-index: 1000;
 }
 
-.burger-btn:hover .burger-btn__bars::before,
-.burger-btn:hover .burger-btn__bars::after {
+.nav__btn:hover .nav__bars::before,
+.nav__btn:hover .nav__bars::after {
   width: 100%;
 }
 
-.burger-btn:focus {
+.nav__btn:focus {
   outline: none;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 8px;
 }
 
-.burger-btn__box {
+.nav__box {
   position: relative;
   width: 40px;
   height: 30px;
 }
 
-.burger-btn__bars, .burger-btn__bars::before, .burger-btn__bars::after {
+.nav__bars, .nav__bars::before, .nav__bars::after {
   content: '';
   position: absolute;
   right: 0;
@@ -116,20 +179,47 @@ body {
   transition: width 0.3s;
 }
 
-.burger-btn__bars {
+.nav__bars {
   width: 100%;
 }
 
-.burger-btn__bars:before {
-  top: 13.5px;
+.nav__bars::before {
+  top: 13px;
   width: 60%;
 }
 
-.burger-btn__bars:after {
-  top: 26.5px;
+.nav__bars::after {
+  top: 26px;
   width: 30%;
   -webkit-transition-delay: 0.1s;
           transition-delay: 0.1s;
+}
+
+@-webkit-keyframes navItemsAnimation {
+  from {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes navItemsAnimation {
+  from {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.nav-items-animation {
+  -webkit-animation: navItemsAnimation 1s backwards;
+          animation: navItemsAnimation 1s backwards;
 }
 
 .header {
@@ -151,7 +241,7 @@ body {
   height: 80vh;
   text-align: center;
   color: #fff;
-  background-image: linear-gradient(45deg, rgba(179, 80, 23, 0.75), rgba(148, 112, 15, 0.75)), url("../img/hero_640.jpg");
+  background-image: linear-gradient(215deg, rgba(131, 111, 11, 0.77) 0%, rgba(175, 71, 10, 0.77) 74%), url("../img/hero_640.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -203,15 +293,21 @@ body {
 }
 
 @media (min-width: 992px) {
-  .burger-btn {
+  .nav__btn {
     top: 45px;
     right: 50px;
   }
   .header {
-    background-image: linear-gradient(45deg, rgba(179, 80, 23, 0.75), rgba(148, 112, 15, 0.75)), url("../img/hero_1920.jpg");
+    background-image: linear-gradient(215deg, rgba(131, 111, 11, 0.77) 0%, rgba(175, 71, 10, 0.77) 74%), url("../img/hero_1920.jpg");
   }
   .header__heading {
     font-size: 8.4rem;
+  }
+  .header__text {
+    font-size: 2.3rem;
+  }
+  .header__btn {
+    font-size: 1.8rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
