@@ -147,7 +147,7 @@ body {
 	height: 85vh;
 	text-align: center;
 	color: $pure-white;
-	@include heroImages('../img/second_hero_640.jpg');
+	@include heroImages('../img/second_hero_1280.jpg');
 	background-attachment: scroll;
 
 	&__heading {
@@ -208,7 +208,7 @@ body {
 	padding: 14em 2em;
 	text-align: center;
 	color: $pure-white;
-	@include heroImages('../img/hero_640.jpg');
+	@include heroImages('../img/hero_1280.jpg');
 	background-position: 0 0;
 	overflow: hidden;
 
@@ -230,7 +230,6 @@ body {
 // MEDIA
 @media (min-width: 576px) {
 	.header {
-		background-image: $sun-gradient, url('../img/second_hero_1920.jpg');
 		&__heading {
 			font-size: 5.2rem;
 		}
@@ -270,7 +269,6 @@ body {
 
 	.hero-img {
 		padding: 16em 2em;
-		background-image: $sun-gradient, url('../img/hero_1280.jpg');
 
 		hr {
 			margin: 0 auto;
