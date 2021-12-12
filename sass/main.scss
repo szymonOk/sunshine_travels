@@ -148,7 +148,6 @@ body {
 	text-align: center;
 	color: $pure-white;
 	@include heroImages('../img/second_hero_1280.jpg');
-	background-attachment: scroll;
 
 	&__heading {
 		font-family: 'Courgette', cursive;
@@ -209,10 +208,13 @@ body {
 	text-align: center;
 	color: $pure-white;
 	@include heroImages('../img/hero_1280.jpg');
+	background-position: 0 0;
 	overflow: hidden;
 
-	hr {
-		color: $pure-white;
+	.line {
+		width: 100%;
+		height: 0.05em;
+		background-color: $pure-white;
 	}
 
 	&__title {
@@ -269,7 +271,7 @@ body {
 	.hero-img {
 		padding: 16em 2em;
 
-		hr {
+		.line {
 			margin: 0 auto;
 			width: 70%;
 		}
@@ -307,6 +309,7 @@ body {
 
 	.hero-img {
 		padding: 18em 2em;
+		background-position: center;
 
 		&__title {
 			font-size: 6.2rem;
@@ -332,6 +335,7 @@ body {
 
 	.header {
 		background-image: $sun-gradient, url('../img/second_hero_1920.jpg');
+		background-attachment: fixed;
 
 		&__heading {
 			font-size: 8.8rem;
@@ -370,8 +374,9 @@ body {
 	.hero-img {
 		padding: 22em 2em;
 		background-image: $sun-gradient, url('../img/hero_1920.jpg');
+		background-attachment: fixed;
 
-		hr {
+		.line {
 			width: 60%;
 			max-width: 700px;
 		}

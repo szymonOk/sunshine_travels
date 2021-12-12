@@ -289,8 +289,6 @@ body {
   background-image: linear-gradient(215deg, rgba(131, 111, 11, 0.77) 0%, rgba(175, 71, 10, 0.77) 74%), url("../img/second_hero_1280.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  background-attachment: scroll;
 }
 
 .header__heading {
@@ -353,12 +351,14 @@ body {
   background-image: linear-gradient(215deg, rgba(131, 111, 11, 0.77) 0%, rgba(175, 71, 10, 0.77) 74%), url("../img/hero_1280.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-position: 0 0;
   overflow: hidden;
 }
 
-.hero-img hr {
-  color: #fff;
+.hero-img .line {
+  width: 100%;
+  height: 0.05em;
+  background-color: #fff;
 }
 
 .hero-img__title {
@@ -408,7 +408,7 @@ body {
   .hero-img {
     padding: 16em 2em;
   }
-  .hero-img hr {
+  .hero-img .line {
     margin: 0 auto;
     width: 70%;
   }
@@ -435,6 +435,7 @@ body {
   }
   .hero-img {
     padding: 18em 2em;
+    background-position: center;
   }
   .hero-img__title {
     font-size: 6.2rem;
@@ -454,6 +455,7 @@ body {
   }
   .header {
     background-image: linear-gradient(215deg, rgba(131, 111, 11, 0.77) 0%, rgba(175, 71, 10, 0.77) 74%), url("../img/second_hero_1920.jpg");
+    background-attachment: fixed;
   }
   .header__heading {
     font-size: 8.8rem;
@@ -489,8 +491,9 @@ body {
   .hero-img {
     padding: 22em 2em;
     background-image: linear-gradient(215deg, rgba(131, 111, 11, 0.77) 0%, rgba(175, 71, 10, 0.77) 74%), url("../img/hero_1920.jpg");
+    background-attachment: fixed;
   }
-  .hero-img hr {
+  .hero-img .line {
     width: 60%;
     max-width: 700px;
   }
