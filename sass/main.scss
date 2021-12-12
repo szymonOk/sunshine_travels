@@ -179,16 +179,34 @@ body {
 	}
 }
 
-// MEDIA
-@media (min-width: 768px) {
-	.white-block {
-		height: 51px;
-		width: 45%;
+// MAIN
+// DREAMS SECTION
+.dreams {
+	&__box {
+		display: flex;
+		flex-direction: column;
+		margin: 2em 0;
 	}
 
+	&__img {
+		width: 100%;
+		margin-bottom: 1em;
+	}
+
+	&__title {
+		margin-bottom: 0.5em;
+	}
+
+	&__text {
+		font-size: 1.4rem;
+	}
+}
+
+// MEDIA
+@media (min-width: 576px) {
 	.header {
 		&__heading {
-			font-size: 6.6rem;
+			font-size: 5.2rem;
 		}
 
 		&__text {
@@ -196,6 +214,52 @@ body {
 		}
 
 		&__btn {
+			font-size: 1.6rem;
+		}
+	}
+
+	.dreams {
+		&__box {
+			flex-direction: row;
+			justify-content: space-between;
+			margin: 3.5em 0;
+
+			&-text {
+				width: 55%;
+
+				&--right {
+					text-align: right;
+				}
+			}
+
+			&-img {
+				width: 40%;
+
+				&--right {
+					order: 1;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.header {
+		&__heading {
+			font-size: 6.6rem;
+		}
+
+		&__text {
+			font-size: 2.2rem;
+		}
+
+		&__btn {
+			font-size: 1.8rem;
+		}
+	}
+
+	.dreams {
+		&__text {
 			font-size: 1.6rem;
 		}
 	}
@@ -207,21 +271,46 @@ body {
 			top: 45px;
 			right: 50px;
 		}
+
+		&__item {
+			font-size: 4rem;
+		}
 	}
 
 	.header {
 		background-image: $sun-gradient, url('../img/hero_1920.jpg');
 
 		&__heading {
-			font-size: 8.4rem;
+			font-size: 8.8rem;
 		}
 
 		&__text {
-			font-size: 2.3rem;
+			font-size: 2.5rem;
 		}
 
 		&__btn {
-			font-size: 1.8rem;
+			font-size: 2rem;
+		}
+	}
+
+	.dreams {
+		&__box {
+			margin: 5em 0;
+
+			&-text {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				margin-bottom: 2.5em;
+			}
+		}
+
+		&__title {
+			font-size: 3.2rem;
+		}
+
+		&__text {
+			font-size: 2rem;
 		}
 	}
 }

@@ -48,3 +48,52 @@
 		transform-origin: left;
 	}
 }
+
+.section-heading {
+	position: relative;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-align: center;
+	margin-bottom: 2em;
+	color: $main-color;
+}
+
+.section-padding {
+	padding: 6em 2em;
+}
+
+@media (min-width: 576px) {
+	.section-heading {
+		font-size: 3rem;
+	}
+
+	.section-padding {
+		padding: 7em 2em;
+	}
+}
+
+@media (min-width: 768px) {
+	.white-block {
+		height: 51px;
+		width: 45%;
+	}
+
+	.section-heading {
+		font-size: 3.4rem;
+	}
+
+	.section-padding {
+		padding: 8em 2em;
+	}
+}
+
+@media (min-width: 992px) {
+	.section-heading {
+		font-size: 4rem;
+	}
+
+	.section-padding {
+		padding: 10em 2em;
+	}
+}
