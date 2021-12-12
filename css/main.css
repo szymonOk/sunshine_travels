@@ -19,7 +19,7 @@
 }
 
 .white-block-right {
-  top: 0;
+  top: -1px;
   right: -50px;
   -webkit-transform: skew(45deg);
           transform: skew(45deg);
@@ -283,10 +283,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 2em;
-  height: 80vh;
+  height: 85vh;
   text-align: center;
   color: #fff;
-  background-image: linear-gradient(215deg, rgba(131, 111, 11, 0.77) 0%, rgba(175, 71, 10, 0.77) 74%), url("../img/hero_640.jpg");
+  background-image: linear-gradient(215deg, rgba(131, 111, 11, 0.77) 0%, rgba(175, 71, 10, 0.77) 74%), url("../img/second_hero_640.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -345,7 +345,36 @@ body {
   font-size: 1.4rem;
 }
 
+.hero-img {
+  position: relative;
+  padding: 14em 2em;
+  text-align: center;
+  color: #fff;
+  background-image: linear-gradient(215deg, rgba(131, 111, 11, 0.77) 0%, rgba(175, 71, 10, 0.77) 74%), url("../img/hero_640.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.hero-img hr {
+  color: #fff;
+}
+
+.hero-img__title {
+  font-family: 'Courgette', cursive;
+  font-size: 4.2rem;
+  margin-bottom: 0.5em;
+}
+
+.hero-img__text {
+  padding: 1em 0;
+}
+
 @media (min-width: 576px) {
+  .header {
+    background-image: linear-gradient(215deg, rgba(131, 111, 11, 0.77) 0%, rgba(175, 71, 10, 0.77) 74%), url("../img/second_hero_1920.jpg");
+  }
   .header__heading {
     font-size: 5.2rem;
   }
@@ -379,6 +408,20 @@ body {
         -ms-flex-order: 1;
             order: 1;
   }
+  .hero-img {
+    padding: 16em 2em;
+    background-image: linear-gradient(215deg, rgba(131, 111, 11, 0.77) 0%, rgba(175, 71, 10, 0.77) 74%), url("../img/hero_1280.jpg");
+  }
+  .hero-img hr {
+    margin: 0 auto;
+    width: 70%;
+  }
+  .hero-img__title {
+    font-size: 5.2rem;
+  }
+  .hero-img__text {
+    font-size: 1.8rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -394,6 +437,15 @@ body {
   .dreams__text {
     font-size: 1.6rem;
   }
+  .hero-img {
+    padding: 18em 2em;
+  }
+  .hero-img__title {
+    font-size: 6.2rem;
+  }
+  .hero-img__text {
+    font-size: 2rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -402,10 +454,10 @@ body {
     right: 50px;
   }
   .nav__item {
-    font-size: 4rem;
+    font-size: 3.8rem;
   }
   .header {
-    background-image: linear-gradient(215deg, rgba(131, 111, 11, 0.77) 0%, rgba(175, 71, 10, 0.77) 74%), url("../img/hero_1920.jpg");
+    background-image: linear-gradient(215deg, rgba(131, 111, 11, 0.77) 0%, rgba(175, 71, 10, 0.77) 74%), url("../img/second_hero_1920.jpg");
   }
   .header__heading {
     font-size: 8.8rem;
@@ -437,6 +489,20 @@ body {
   }
   .dreams__text {
     font-size: 2rem;
+  }
+  .hero-img {
+    padding: 22em 2em;
+    background-image: linear-gradient(215deg, rgba(131, 111, 11, 0.77) 0%, rgba(175, 71, 10, 0.77) 74%), url("../img/hero_1920.jpg");
+  }
+  .hero-img hr {
+    width: 60%;
+    max-width: 700px;
+  }
+  .hero-img__title {
+    font-size: 7rem;
+  }
+  .hero-img__text {
+    font-size: 2.4rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

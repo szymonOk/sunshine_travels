@@ -144,10 +144,10 @@ body {
 	justify-content: center;
 	align-items: center;
 	padding: 2em;
-	height: 80vh;
+	height: 85vh;
 	text-align: center;
 	color: $pure-white;
-	@include heroImages('../img/hero_640.jpg');
+	@include heroImages('../img/second_hero_640.jpg');
 	background-attachment: scroll;
 
 	&__heading {
@@ -202,9 +202,34 @@ body {
 	}
 }
 
+// HERO SECTION
+.hero-img {
+	position: relative;
+	padding: 14em 2em;
+	text-align: center;
+	color: $pure-white;
+	@include heroImages('../img/hero_640.jpg');
+	overflow: hidden;
+
+	hr {
+		color: $pure-white;
+	}
+
+	&__title {
+		font-family: 'Courgette', cursive;
+		font-size: 4.2rem;
+		margin-bottom: 0.5em;
+	}
+
+	&__text {
+		padding: 1em 0;
+	}
+}
+
 // MEDIA
 @media (min-width: 576px) {
 	.header {
+		background-image: $sun-gradient, url('../img/second_hero_1920.jpg');
 		&__heading {
 			font-size: 5.2rem;
 		}
@@ -241,6 +266,24 @@ body {
 			}
 		}
 	}
+
+	.hero-img {
+		padding: 16em 2em;
+		background-image: $sun-gradient, url('../img/hero_1280.jpg');
+
+		hr {
+			margin: 0 auto;
+			width: 70%;
+		}
+
+		&__title {
+			font-size: 5.2rem;
+		}
+
+		&__text {
+			font-size: 1.8rem;
+		}
+	}
 }
 
 @media (min-width: 768px) {
@@ -263,6 +306,18 @@ body {
 			font-size: 1.6rem;
 		}
 	}
+
+	.hero-img {
+		padding: 18em 2em;
+
+		&__title {
+			font-size: 6.2rem;
+		}
+
+		&__text {
+			font-size: 2rem;
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -273,12 +328,12 @@ body {
 		}
 
 		&__item {
-			font-size: 4rem;
+			font-size: 3.8rem;
 		}
 	}
 
 	.header {
-		background-image: $sun-gradient, url('../img/hero_1920.jpg');
+		background-image: $sun-gradient, url('../img/second_hero_1920.jpg');
 
 		&__heading {
 			font-size: 8.8rem;
@@ -311,6 +366,24 @@ body {
 
 		&__text {
 			font-size: 2rem;
+		}
+	}
+
+	.hero-img {
+		padding: 22em 2em;
+		background-image: $sun-gradient, url('../img/hero_1920.jpg');
+
+		hr {
+			width: 60%;
+			max-width: 700px;
+		}
+
+		&__title {
+			font-size: 7rem;
+		}
+
+		&__text {
+			font-size: 2.4rem;
 		}
 	}
 }
