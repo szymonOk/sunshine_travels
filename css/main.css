@@ -304,7 +304,7 @@ body {
 
 .header__btn {
   margin-top: 2em;
-  padding: 0.8em 1.6em;
+  padding: 1em 1.6em;
   font-size: 1.4rem;
   background-color: #fff;
   color: #2e2e2e;
@@ -371,6 +371,142 @@ body {
   padding: 1em 0;
 }
 
+.places__card {
+  position: relative;
+  margin: 2em 0;
+  height: 480px;
+  color: #fff;
+  text-align: center;
+  -webkit-perspective: 1400px;
+          perspective: 1400px;
+}
+
+.places__card:hover .places__card-img {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  opacity: 0;
+}
+
+.places__card:hover .places__card-info {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+  opacity: 1;
+}
+
+.places__card-img {
+  padding: 2em;
+  height: 100%;
+  border-radius: 10px;
+  background-size: cover;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+
+.places__card-img-title {
+  font-family: 'Courgette', cursive;
+  font-size: 2.8rem;
+}
+
+.places__card-img-info {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-size: 1.8rem;
+}
+
+.places__card-img-info i {
+  margin-right: 0.3em;
+}
+
+.places__card-img--first {
+  background-image: linear-gradient(45deg, rgba(255, 230, 8, 0.75), rgba(255, 119, 8, 0.75)), url("../img/places1.jpg");
+}
+
+.places__card-img--second {
+  background-image: linear-gradient(215deg, rgba(131, 111, 11, 0.77) 0%, rgba(175, 71, 10, 0.77) 74%), url("../img/places2.jpg");
+}
+
+.places__card-img--third {
+  background-image: linear-gradient(45deg, rgba(231, 16, 16, 0.75), rgba(255, 136, 0, 0.75)), url("../img/places3.jpg");
+}
+
+.places__card-info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: radial-gradient(circle at top right, #ffe608 0%, #ff7708 100%);
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  opacity: 0;
+  border-radius: 10px;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+
+.places__card-info-title {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 1.2em;
+  width: 100%;
+  font-family: 'Courgette', cursive;
+  font-size: 2.8rem;
+}
+
+.places__card-info-list {
+  margin: 0 auto;
+  padding: 15px 0;
+  width: 60%;
+  list-style: none;
+}
+
+.places__card-info-list-item {
+  padding: 1em;
+  border-bottom: 1px solid #ededed;
+}
+
+.places__card-info-list-item:last-child {
+  border: none;
+}
+
+.places__card-info-btn {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 2em;
+  padding: 1em;
+  width: 70%;
+  background-color: #dd4efa;
+  color: #2e2e2e;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.places__card-info-btn::before {
+  background-color: #d14feb;
+}
+
 @media (min-width: 576px) {
   .header__heading {
     font-size: 5.2rem;
@@ -418,6 +554,9 @@ body {
   .hero-img__text {
     font-size: 1.8rem;
   }
+  .places__card {
+    margin: 2em 3em;
+  }
 }
 
 @media (min-width: 768px) {
@@ -442,6 +581,20 @@ body {
   }
   .hero-img__text {
     font-size: 2rem;
+  }
+  .places__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .places__card {
+    margin: 1em;
+    width: 45%;
   }
 }
 
@@ -502,6 +655,20 @@ body {
   }
   .hero-img__text {
     font-size: 2.4rem;
+  }
+  .places__card {
+    margin: 1.5em;
+    width: 40%;
+  }
+  .places__card-info-list-item {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .places__card {
+    height: 510px;
+    width: 28%;
   }
 }
 /*# sourceMappingURL=main.css.map */
