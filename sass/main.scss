@@ -236,7 +236,7 @@ body {
 		height: 480px;
 		color: $pure-white;
 		text-align: center;
-		perspective: 1400px;
+		perspective: 1600px;
 
 		&:hover {
 			.places__card-img {
@@ -259,7 +259,7 @@ body {
 
 			&-title {
 				font-family: 'Courgette', cursive;
-				font-size: 2.8rem;
+				font-size: 3.2rem;
 			}
 
 			&-info {
@@ -305,10 +305,10 @@ body {
 				position: absolute;
 				left: 50%;
 				transform: translateX(-50%);
-				top: 1.2em;
+				top: 1em;
 				width: 100%;
 				font-family: 'Courgette', cursive;
-				font-size: 2.8rem;
+				font-size: 3.2rem;
 			}
 
 			&-list {
@@ -317,9 +317,17 @@ body {
 				width: 60%;
 				list-style: none;
 
+				.capitalize {
+					text-transform: capitalize;
+				}
+
 				&-item {
 					padding: 1em;
 					border-bottom: 1px solid $light-white;
+
+					&::first-letter {
+						text-transform: uppercase;
+					}
 
 					&:last-child {
 						border: none;
@@ -345,6 +353,75 @@ body {
 				&::before {
 					background-color: $purple-color-hover;
 				}
+			}
+		}
+	}
+}
+
+// OFFERS SECTION
+.offers {
+	position: relative;
+	@include heroImages('../img/offers_bg_1280.jpg');
+	overflow: hidden;
+
+	.section-heading {
+		color: $pure-white;
+	}
+
+	&__option {
+		margin: 1.5em 0;
+		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+		background-color: $pure-white;
+		overflow: hidden;
+
+		&-img {
+			width: 100%;
+			transition: transform 0.3s;
+
+			&:hover {
+				transform: scale(1.08);
+			}
+		}
+
+		&-info {
+			padding: 2em;
+			background-color: $pure-white;
+			z-index: 10;
+		}
+
+		&-heading {
+			margin-bottom: 0.5em;
+			font-size: 2.4rem;
+			font-weight: 300;
+		}
+
+		&-text {
+			margin-bottom: 0.5em;
+			color: $dark;
+			font-size: 1.5rem;
+
+			&--last {
+				padding-top: 0.5em;
+				font-size: 1.6rem;
+				font-style: italic;
+			}
+		}
+
+		&-btn {
+			font-size: 1.5rem;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			width: 100%;
+			padding: 0.8em;
+			margin-top: 1em;
+			background-color: $main-color;
+			color: $light-white;
+			border: none;
+			border-radius: 10px;
+			cursor: pointer;
+
+			&::before {
+				background-color: $secondary-color;
 			}
 		}
 	}
@@ -410,6 +487,34 @@ body {
 	.places {
 		&__card {
 			margin: 2em 3em;
+		}
+	}
+
+	.offers {
+		&__option {
+			display: flex;
+			margin: 2em 0;
+			width: 100%;
+
+			&-img {
+				width: 50%;
+				height: auto;
+
+				&--right {
+					order: 1;
+				}
+			}
+
+			&-info {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				width: 50%;
+
+				&--right {
+					text-align: right;
+				}
+			}
 		}
 	}
 }
@@ -538,6 +643,34 @@ body {
 
 			&-info-list-item {
 				font-size: 1.8rem;
+			}
+		}
+	}
+
+	.offers {
+		background-image: $sun-gradient, url('../img/offers_bg_1920.jpg');
+
+		&__option {
+			height: 350px;
+			&-img {
+				object-fit: cover;
+			}
+
+			&-heading {
+				font-size: 2.8rem;
+			}
+
+			&-text {
+				font-size: 1.8rem;
+
+				&--last {
+					font-size: 1.9rem;
+				}
+			}
+
+			&-btn {
+				font-size: 1.6rem;
+				padding: 1.1em;
 			}
 		}
 	}

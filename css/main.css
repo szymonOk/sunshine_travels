@@ -377,8 +377,8 @@ body {
   height: 480px;
   color: #fff;
   text-align: center;
-  -webkit-perspective: 1400px;
-          perspective: 1400px;
+  -webkit-perspective: 1600px;
+          perspective: 1600px;
 }
 
 .places__card:hover .places__card-img {
@@ -406,7 +406,7 @@ body {
 
 .places__card-img-title {
   font-family: 'Courgette', cursive;
-  font-size: 2.8rem;
+  font-size: 3.2rem;
 }
 
 .places__card-img-info {
@@ -464,10 +464,10 @@ body {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  top: 1.2em;
+  top: 1em;
   width: 100%;
   font-family: 'Courgette', cursive;
-  font-size: 2.8rem;
+  font-size: 3.2rem;
 }
 
 .places__card-info-list {
@@ -477,9 +477,17 @@ body {
   list-style: none;
 }
 
+.places__card-info-list .capitalize {
+  text-transform: capitalize;
+}
+
 .places__card-info-list-item {
   padding: 1em;
   border-bottom: 1px solid #ededed;
+}
+
+.places__card-info-list-item::first-letter {
+  text-transform: uppercase;
 }
 
 .places__card-info-list-item:last-child {
@@ -505,6 +513,81 @@ body {
 
 .places__card-info-btn::before {
   background-color: #d14feb;
+}
+
+.offers {
+  position: relative;
+  background-image: linear-gradient(215deg, rgba(131, 111, 11, 0.77) 0%, rgba(175, 71, 10, 0.77) 74%), url("../img/offers_bg_1280.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.offers .section-heading {
+  color: #fff;
+}
+
+.offers__option {
+  margin: 1.5em 0;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.offers__option-img {
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.offers__option-img:hover {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+
+.offers__option-info {
+  padding: 2em;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.offers__option-heading {
+  margin-bottom: 0.5em;
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+
+.offers__option-text {
+  margin-bottom: 0.5em;
+  color: #2e2e2e;
+  font-size: 1.5rem;
+}
+
+.offers__option-text--last {
+  padding-top: 0.5em;
+  font-size: 1.6rem;
+  font-style: italic;
+}
+
+.offers__option-btn {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: 100%;
+  padding: 0.8em;
+  margin-top: 1em;
+  background-color: #cc861e;
+  color: #ededed;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.offers__option-btn::before {
+  background-color: #be7a13;
 }
 
 @media (min-width: 576px) {
@@ -556,6 +639,37 @@ body {
   }
   .places__card {
     margin: 2em 3em;
+  }
+  .offers__option {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 2em 0;
+    width: 100%;
+  }
+  .offers__option-img {
+    width: 50%;
+    height: auto;
+  }
+  .offers__option-img--right {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .offers__option-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 50%;
+  }
+  .offers__option-info--right {
+    text-align: right;
   }
 }
 
@@ -662,6 +776,29 @@ body {
   }
   .places__card-info-list-item {
     font-size: 1.8rem;
+  }
+  .offers {
+    background-image: linear-gradient(215deg, rgba(131, 111, 11, 0.77) 0%, rgba(175, 71, 10, 0.77) 74%), url("../img/offers_bg_1920.jpg");
+  }
+  .offers__option {
+    height: 350px;
+  }
+  .offers__option-img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .offers__option-heading {
+    font-size: 2.8rem;
+  }
+  .offers__option-text {
+    font-size: 1.8rem;
+  }
+  .offers__option-text--last {
+    font-size: 1.9rem;
+  }
+  .offers__option-btn {
+    font-size: 1.6rem;
+    padding: 1.1em;
   }
 }
 
