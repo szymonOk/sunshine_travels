@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
@@ -55,10 +55,11 @@
                         <img src="./img/dreams1_640.jpg" alt="morze i skały" class="dreams__img">
                     </div>
                     <div class="dreams__box-text">
-                        <h3 class="dreams__title">Wybrzeże w Busan</h3>
-                        <p class="dreams__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
-                            voluptatum amet? Maxime aut at enim repudiandae ipsa obcaecati, illum, labore dicta dolorem
-                            consequatur odio et vitae voluptas est veniam eligendi.</p>
+                        <h3 class="dreams__title">O nas</h3>
+                        <p class="dreams__text">Jesteśmy biurem podróży zajmującym się organizowaniem wycieczek
+                            obejmujących tereny Korei Południowej. Działamy od wielu lat przez co posiadamy duże
+                            doświadczenie w tym co robimy. Jeśli chcesz spełnić swoje marzenia i zobaczyć na własne oczy
+                            cudowne krajobrazy dawnego Joseonu to dobrze trafiłeś!</p>
                     </div>
                 </div>
 
@@ -88,7 +89,7 @@
         </section>
 
         <!-- PLACES SECTION -->
-        <section id="places" class="places section-padding section white-section">
+        <section id="places" class="places section section-padding white-section">
             <div class="wrapper">
                 <h2 class="section-heading">polecane miejsca</h2>
 
@@ -171,7 +172,8 @@
                             <h3 class="offers__option-heading">Rodzinny wyjazd</h3>
                             <p class="offers__option-text">Oferta w skład, której wchodzi: transport, hotel oraz
                                 wyżywienie dla dwojga dorosłych + dwójki dzieci.</p>
-                            <p class="offers__option-text offers__option-text--last">Pobyt obejmuje 14 dni w 4-gwiazdkowym hotelu w Seulu.</p>
+                            <p class="offers__option-text offers__option-text--last">Pobyt obejmuje 14 dni w
+                                4-gwiazdkowym hotelu w Seulu.</p>
                             <button class="offers__option-btn btn-animation">wybierz</button>
                         </div>
                     </div>
@@ -180,10 +182,11 @@
                         <img src="./img/option2.jpg" alt="para na skale o zachodzie słońca"
                             class="offers__option-img offers__option-img--right">
                         <div class="offers__option-info offers__option-info--right">
-                            <h3 class="offers__option-heading">Wjazd dla par</h3>
+                            <h3 class="offers__option-heading">Wyjazd dla par</h3>
                             <p class="offers__option-text">Oferta dla dwojga dorosłych obejmująca transport, nocleg i
                                 wyżywienie, a także przewodnika po zabytkach.</p>
-                            <p class="offers__option-text offers__option-text--last">Pobyt w luksusowym 5-gwiazdkowym hotelu w Busan.</p>
+                            <p class="offers__option-text offers__option-text--last">Pobyt w luksusowym 5-gwiazdkowym
+                                hotelu w Busan.</p>
                             <button class="offers__option-btn btn-animation">wybierz</button>
                         </div>
                     </div>
@@ -194,7 +197,8 @@
                             <h3 class="offers__option-heading">Spersonalizowana oferta</h3>
                             <p class="offers__option-text">Możliwość dostosowania wyjazdu do ilości osób oraz wybór
                                 hotelu w jednym z trzech miejsc (Seul, Busan, Wyspa Jeju).</p>
-                            <p class="offers__option-text offers__option-text--last">Cena zależna od wybranych opcji oraz ilości osób.</p>
+                            <p class="offers__option-text offers__option-text--last">Cena zależna od wybranych opcji
+                                oraz ilości osób.</p>
                             <button class="offers__option-btn btn-animation">wybierz</button>
                         </div>
                     </div>
@@ -204,8 +208,86 @@
             </div>
         </section>
 
+        <!-- REVIEWS SECTION -->
+        <section id="reviews" class="reviews section section-padding white-section">
+            <div class="wrapper">
+                <h2 class="section-heading">Opinie</h2>
+
+                <div class="reviews__container">
+
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/rev1.jpg" alt="Eugene Choi">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote"><i class="fas fa-quote-right"></i></div>
+                            <p class="reviews__box-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo,
+                                temporibus.</p>
+                            <strong>Eugene Choi</strong>
+                        </div>
+                    </div>
+
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/rev2.jpg" alt="Stefan Bąk">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote"><i class="fas fa-quote-right"></i></div>
+                            <p class="reviews__box-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo,
+                                temporibus.</p>
+                            <strong>Stefan Bąk</strong>
+                        </div>
+                    </div>
+
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/rev3.jpg" alt="Ewelina Lisowska">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote"><i class="fas fa-quote-right"></i></div>
+                            <p class="reviews__box-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo,
+                                temporibus.</p>
+                            <strong>Ewelina Lisowska</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact section section-padding">
+            <div class="white-block white-block-left"></div>
+            <div class="white-block white-block-right"></div>
+            <div class="wrapper">
+                <h2 class="section-heading">kontakt</h2>
+
+                <form class="contact__form">
+
+                    <div class="contact__form-top">
+                        <label for="name" class="contact__form-label">Imię i nazwisko:</label>
+                        <input id="name" type="email" class="contact__form-input">
+
+                        <label for="email" class="contact__form-label">E-mail:</label>
+                        <input id="email" type="text" class="contact__form-input">
+                    </div>
+
+                    <label for="msg" class="contact__form-label">Wiadomość:</label>
+                    <textarea id="msg" class="contact__form-textarea"></textarea>
+
+                    <button type="submit" class="contact__form-btn btn-animation">Wyślij</button>
+
+                </form>
+            </div>
+        </section>
+
     </main>
 
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/slick.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

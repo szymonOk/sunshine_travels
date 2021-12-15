@@ -161,16 +161,11 @@ body {
 	}
 
 	&__btn {
+		@include btnStyle;
 		margin-top: 2em;
-		padding: 1em 1.6em;
-		font-size: 1.4rem;
 		background-color: $pure-white;
 		color: $dark;
-		border: none;
-		border-radius: 10px;
 		text-decoration: none;
-		text-transform: uppercase;
-		cursor: pointer;
 
 		&::before {
 			background-color: $light-white;
@@ -338,17 +333,12 @@ body {
 			&-btn {
 				position: absolute;
 				left: 50%;
-				transform: translateX(-50%);
 				bottom: 2em;
-				padding: 1em;
+				transform: translateX(-50%);
+				@include btnStyle;
 				width: 70%;
 				background-color: $purple-color;
 				color: $dark;
-				border-radius: 10px;
-				border: none;
-				cursor: pointer;
-				letter-spacing: 2px;
-				text-transform: uppercase;
 
 				&::before {
 					background-color: $purple-color-hover;
@@ -408,22 +398,122 @@ body {
 		}
 
 		&-btn {
-			font-size: 1.5rem;
-			text-transform: uppercase;
-			letter-spacing: 2px;
-			width: 100%;
-			padding: 0.8em;
+			@include btnStyle;
 			margin-top: 1em;
-			background-color: $main-color;
-			color: $light-white;
-			border: none;
-			border-radius: 10px;
-			cursor: pointer;
+			width: 100%;
 
 			&::before {
 				background-color: $secondary-color;
 			}
 		}
+	}
+}
+
+// REVIEWS SECTION
+.reviews {
+	&__box {
+		position: relative;
+		margin: 2em;
+		padding: 2em;
+		border-radius: 10px;
+		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+		transition: transform 0.3s;
+
+		&:hover {
+			transform: scale(0.95);
+		}
+	}
+
+	&__box-img {
+		position: absolute;
+		top: 10%;
+		left: 75%;
+		transform: translate(-50%, -50%);
+
+		img {
+			width: 90px;
+			height: 90px;
+			object-fit: cover;
+			border-radius: 50%;
+		}
+	}
+
+	&__box-quote {
+		margin-bottom: 0.5em;
+		color: $main-color;
+		font-size: 3rem;
+	}
+
+	&__box-text {
+		margin-bottom: 0.5em;
+		font-size: 1.5rem;
+		color: $dark;
+	}
+}
+
+// CONTACT SECTION
+.contact {
+	position: relative;
+	background-color: $light-white;
+	overflow: hidden;
+
+	.white-block-left {
+		background-color: $dark;
+	}
+
+	&__form,
+	&__form-top {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__form-label {
+		margin-bottom: 0.4em;
+		text-transform: uppercase;
+	}
+
+	&__form-input {
+		@include contactFormInput;
+		border: 2px solid transparent;
+
+		&:focus {
+			outline: none;
+			border: 2px solid $main-color;
+			border-radius: 8px;
+		}
+	}
+
+	&__form-textarea {
+		@include contactFormInput;
+		min-width: 100%;
+		max-width: 100%;
+		width: 100%;
+		min-height: 150px;
+
+		border: 2px solid transparent;
+
+		&:focus {
+			outline: none;
+			border: 2px solid $main-color;
+			border-radius: 8px;
+		}
+	}
+
+	&__form-btn {
+		@include btnStyle;
+		align-self: flex-end;
+		width: 30%;
+
+		&::before {
+			background-color: $secondary-color;
+		}
+	}
+}
+
+// MEDIA PADDING FIX
+@media (max-width: 700px) {
+	.reviews {
+		padding: 6em 0;
 	}
 }
 
@@ -493,8 +583,8 @@ body {
 	.offers {
 		&__option {
 			display: flex;
-			margin: 2em 0;
-			width: 100%;
+			margin: 2em auto;
+			width: 90%;
 
 			&-img {
 				width: 50%;
@@ -649,6 +739,7 @@ body {
 
 	.offers {
 		background-image: $sun-gradient, url('../img/offers_bg_1920.jpg');
+		background-attachment: fixed;
 
 		&__option {
 			height: 350px;
@@ -670,8 +761,34 @@ body {
 
 			&-btn {
 				font-size: 1.6rem;
-				padding: 1.1em;
+				padding: 0.9em 1.2em;
 			}
+		}
+	}
+
+	.reviews {
+		img {
+			width: 100px;
+			height: 100px;
+		}
+
+		&__box-quote {
+			font-size: 3.4rem;
+		}
+
+		&__box-text {
+			font-size: 1.8rem;
+		}
+
+		strong {
+			font-size: 1.9rem;
+		}
+	}
+
+	.contact {
+		&__form-btn {
+			font-size: 1.6rem;
+			padding: 0.9em 1.2em;
 		}
 	}
 }
