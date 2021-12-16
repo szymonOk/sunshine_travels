@@ -188,6 +188,7 @@ body {
 	}
 
 	&__title {
+		font-size: 2rem;
 		margin-bottom: 0.5em;
 	}
 
@@ -199,7 +200,7 @@ body {
 // HERO SECTION
 .hero-img {
 	position: relative;
-	padding: 14em 2em;
+	padding: 16em 2em;
 	text-align: center;
 	color: $pure-white;
 	@include heroImages('../img/hero_1280.jpg');
@@ -359,7 +360,7 @@ body {
 	}
 
 	&__option {
-		margin: 1.5em 0;
+		margin: 2em 0;
 		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 		background-color: $pure-white;
 		overflow: hidden;
@@ -510,6 +511,93 @@ body {
 	}
 }
 
+// FOOTER
+.footer {
+	color: $pure-white;
+	background-color: $dark;
+
+	.wrapper {
+		padding: 6em 2em 2em;
+	}
+
+	&__box-title {
+		margin-bottom: 1em;
+		font-size: 2.6rem;
+
+		i {
+			margin-right: 0.4em;
+		}
+	}
+
+	&__box-text {
+		margin-bottom: 2.5em;
+		font-size: 1.5rem;
+	}
+
+	&__box-link {
+		color: $pure-white;
+		font-size: 3.6rem;
+		text-decoration: none;
+		transition: color 0.3s;
+		margin: 0 0.5em;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&:hover {
+			color: #aaa;
+		}
+	}
+
+	&__box-desktop {
+		display: none;
+	}
+
+	&__box-list-item {
+		position: relative;
+		list-style-type: none;
+		margin: 0.8em 0;
+		margin-left: -0.5em;
+		font-size: 1.5rem;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			width: 1.5px;
+			height: 100%;
+			background-color: #fff;
+			transform: scale(0);
+			transform-origin: bottom;
+			transition: transform 0.5s;
+		}
+
+		&:hover::before {
+			transform-origin: top;
+			transform: scale(1);
+		}
+
+		a {
+			padding: 0.5em;
+			color: $light-white;
+			text-decoration: none;
+		}
+	}
+
+	.line {
+		width: 100%;
+		height: 0.05em;
+		background-color: $pure-white;
+	}
+
+	&__bottom-text {
+		padding: 1.5em;
+		text-align: center;
+		font-size: 1.8rem;
+	}
+}
+
 // MEDIA PADDING FIX
 @media (max-width: 700px) {
 	.reviews {
@@ -558,8 +646,6 @@ body {
 	}
 
 	.hero-img {
-		padding: 16em 2em;
-
 		.line {
 			margin: 0 auto;
 			width: 70%;
@@ -583,7 +669,7 @@ body {
 	.offers {
 		&__option {
 			display: flex;
-			margin: 2em auto;
+			margin: 2.5em auto;
 			width: 90%;
 
 			&-img {
@@ -605,6 +691,12 @@ body {
 					text-align: right;
 				}
 			}
+		}
+	}
+
+	.footer {
+		.wrapper {
+			padding: 6em 4em 2em;
 		}
 	}
 }
@@ -653,6 +745,30 @@ body {
 		&__card {
 			margin: 1em;
 			width: 45%;
+		}
+	}
+
+	.footer {
+		.wrapper {
+			padding: 6em 2em 2em;
+		}
+
+		&__boxes {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__box {
+			width: 25%;
+			margin: 0 2em;
+
+			&:first-child {
+				width: 50%;
+			}
+		}
+
+		&__box-desktop {
+			display: block;
 		}
 	}
 }
@@ -789,6 +905,17 @@ body {
 		&__form-btn {
 			font-size: 1.6rem;
 			padding: 0.9em 1.2em;
+		}
+	}
+
+	.footer {
+		&__box-text,
+		&__box-list-item {
+			font-size: 1.7rem;
+		}
+
+		&__box:first-child {
+			margin-right: 5em;
 		}
 	}
 }
