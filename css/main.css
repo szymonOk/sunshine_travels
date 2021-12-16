@@ -241,6 +241,12 @@ body {
           transition-delay: 0.1s;
 }
 
+.black-bars,
+.black-bars::before,
+.black-bars::after {
+  background-color: #2e2e2e;
+}
+
 @-webkit-keyframes navItemsAnimation {
   from {
     -webkit-transform: translateX(200%);
@@ -382,19 +388,19 @@ body {
   height: 480px;
   color: #fff;
   text-align: center;
-  -webkit-perspective: 1600px;
-          perspective: 1600px;
+  -webkit-perspective: 1800px;
+          perspective: 1800px;
 }
 
 .places__card:hover .places__card-img {
-  -webkit-transform: rotateY(-180deg);
-          transform: rotateY(-180deg);
+  -webkit-transform: rotateX(-180deg);
+          transform: rotateX(-180deg);
   opacity: 0;
 }
 
 .places__card:hover .places__card-info {
-  -webkit-transform: rotateY(0);
-          transform: rotateY(0);
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
   opacity: 1;
 }
 
@@ -454,8 +460,8 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   background-image: radial-gradient(circle at top right, #ffe608 0%, #ff7708 100%);
-  -webkit-transform: rotateY(-180deg);
-          transform: rotateY(-180deg);
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
   opacity: 0;
   border-radius: 10px;
   -webkit-transition: opacity 1s, -webkit-transform 1s;
