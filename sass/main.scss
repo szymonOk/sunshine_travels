@@ -281,11 +281,11 @@ body {
 			}
 
 			&--second {
-				background-image: $sun-gradient, url('../img/places2.jpg');
+				background-image: $red-gradient, url('../img/places2.jpg');
 			}
 
 			&--third {
-				background-image: $red-gradient, url('../img/places3.jpg');
+				background-image: $sun-gradient, url('../img/places3.jpg');
 			}
 		}
 

@@ -1,15 +1,15 @@
-$main-color: #cc861e;
-$secondary-color: #be7a13;
+$main-color: #b81329;
+$secondary-color: #880a0a;
 $pure-white: #fff;
 $light-white: #ededed;
 $dark: #2e2e2e;
-$purple-color: #dd4efa;
-$purple-color-hover: #d14feb;
+$purple-color: #8fec6a;
+$purple-color-hover: #9bd657;
 
-$sun-gradient: linear-gradient(215deg, rgba(131, 111, 11, 0.77) 0%, rgba(175, 71, 10, 0.77) 74%);
-$sun-gradient-solid: linear-gradient(215deg, rgb(131, 111, 11) 0%, rgb(175, 71, 10) 74%);
+$sun-gradient: linear-gradient(35deg, rgba(33, 97, 216, 0.75) 0%, rgba(196, 13, 22, 0.75) 79%);
+$sun-gradient-solid: linear-gradient(35deg, rgb(33, 97, 216) 0%, rgb(196, 13, 22) 79%);
 
-$light-sun-gradient: linear-gradient(45deg, rgba(255, 230, 8, 0.75), rgba(255, 119, 8, 0.75));
-$red-gradient: linear-gradient(45deg, rgba(231, 16, 16, 0.75), rgba(255, 136, 0, 0.75));
+$light-sun-gradient: linear-gradient(145deg, rgba(26, 102, 243, 0.79) 0%, rgba(240, 22, 33, 0.79) 79%);
+$red-gradient: linear-gradient(45deg, rgba(202, 39, 17, 0.795), rgba(123, 14, 196, 0.781));
 
-$light-sun-gradient-solid: radial-gradient(circle at top right, rgb(255, 230, 8) 0%, rgb(255, 119, 8) 100%);
+$light-sun-gradient-solid: radial-gradient(circle at top right, rgb(15, 90, 228) 0%, rgb(224, 12, 23) 100%);

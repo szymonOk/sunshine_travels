@@ -66,7 +66,7 @@
   letter-spacing: 2px;
   text-align: center;
   margin-bottom: 2em;
-  color: #cc861e;
+  color: #b81329;
   font-size: 2.6rem;
 }
 
@@ -142,7 +142,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: linear-gradient(215deg, #836f0b 0%, #af470a 74%);
+  background-image: linear-gradient(35deg, #2161d8 0%, #c40d16 79%);
   z-index: 100;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
@@ -293,7 +293,7 @@ body {
   height: 85vh;
   text-align: center;
   color: #fff;
-  background-image: linear-gradient(215deg, rgba(131, 111, 11, 0.77) 0%, rgba(175, 71, 10, 0.77) 74%), url("../img/second_hero_1280.jpg");
+  background-image: linear-gradient(35deg, rgba(33, 97, 216, 0.75) 0%, rgba(196, 13, 22, 0.75) 79%), url("../img/second_hero_1280.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -313,7 +313,7 @@ body {
   border: none;
   border-radius: 10px;
   color: #fff;
-  background-color: #cc861e;
+  background-color: #b81329;
   letter-spacing: 2px;
   padding: 0.8em 1.2em;
   font-size: 1.5rem;
@@ -359,7 +359,7 @@ body {
   padding: 16em 2em;
   text-align: center;
   color: #fff;
-  background-image: linear-gradient(215deg, rgba(131, 111, 11, 0.77) 0%, rgba(175, 71, 10, 0.77) 74%), url("../img/hero_1280.jpg");
+  background-image: linear-gradient(35deg, rgba(33, 97, 216, 0.75) 0%, rgba(196, 13, 22, 0.75) 79%), url("../img/hero_1280.jpg");
   background-size: cover;
   background-position: center;
   background-position: 0 0;
@@ -432,15 +432,15 @@ body {
 }
 
 .places__card-img--first {
-  background-image: linear-gradient(45deg, rgba(255, 230, 8, 0.75), rgba(255, 119, 8, 0.75)), url("../img/places1.jpg");
+  background-image: linear-gradient(145deg, rgba(26, 102, 243, 0.79) 0%, rgba(240, 22, 33, 0.79) 79%), url("../img/places1.jpg");
 }
 
 .places__card-img--second {
-  background-image: linear-gradient(215deg, rgba(131, 111, 11, 0.77) 0%, rgba(175, 71, 10, 0.77) 74%), url("../img/places2.jpg");
+  background-image: linear-gradient(45deg, rgba(202, 39, 17, 0.795), rgba(123, 14, 196, 0.781)), url("../img/places2.jpg");
 }
 
 .places__card-img--third {
-  background-image: linear-gradient(45deg, rgba(231, 16, 16, 0.75), rgba(255, 136, 0, 0.75)), url("../img/places3.jpg");
+  background-image: linear-gradient(35deg, rgba(33, 97, 216, 0.75) 0%, rgba(196, 13, 22, 0.75) 79%), url("../img/places3.jpg");
 }
 
 .places__card-info {
@@ -459,7 +459,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: radial-gradient(circle at top right, #ffe608 0%, #ff7708 100%);
+  background-image: radial-gradient(circle at top right, #0f5ae4 0%, #e00c17 100%);
   -webkit-transform: rotateX(180deg);
           transform: rotateX(180deg);
   opacity: 0;
@@ -514,24 +514,24 @@ body {
   border: none;
   border-radius: 10px;
   color: #fff;
-  background-color: #cc861e;
+  background-color: #b81329;
   letter-spacing: 2px;
   padding: 0.8em 1.2em;
   font-size: 1.5rem;
   text-transform: uppercase;
   cursor: pointer;
   width: 70%;
-  background-color: #dd4efa;
+  background-color: #8fec6a;
   color: #2e2e2e;
 }
 
 .places__card-info-btn::before {
-  background-color: #d14feb;
+  background-color: #9bd657;
 }
 
 .offers {
   position: relative;
-  background-image: linear-gradient(215deg, rgba(131, 111, 11, 0.77) 0%, rgba(175, 71, 10, 0.77) 74%), url("../img/offers_bg_1280.jpg");
+  background-image: linear-gradient(35deg, rgba(33, 97, 216, 0.75) 0%, rgba(196, 13, 22, 0.75) 79%), url("../img/offers_bg_1280.jpg");
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -590,7 +590,7 @@ body {
   border: none;
   border-radius: 10px;
   color: #fff;
-  background-color: #cc861e;
+  background-color: #b81329;
   letter-spacing: 2px;
   padding: 0.8em 1.2em;
   font-size: 1.5rem;
@@ -601,7 +601,7 @@ body {
 }
 
 .offers__option-btn::before {
-  background-color: #be7a13;
+  background-color: #880a0a;
 }
 
 .reviews__box {
@@ -640,7 +640,7 @@ body {
 
 .reviews__box-quote {
   margin-bottom: 0.5em;
-  color: #cc861e;
+  color: #b81329;
   font-size: 3rem;
 }
 
@@ -686,7 +686,7 @@ body {
 
 .contact__form-input:focus {
   outline: none;
-  border: 2px solid #cc861e;
+  border: 2px solid #b81329;
   border-radius: 8px;
 }
 
@@ -705,7 +705,7 @@ body {
 
 .contact__form-textarea:focus {
   outline: none;
-  border: 2px solid #cc861e;
+  border: 2px solid #b81329;
   border-radius: 8px;
 }
 
@@ -713,7 +713,7 @@ body {
   border: none;
   border-radius: 10px;
   color: #fff;
-  background-color: #cc861e;
+  background-color: #b81329;
   letter-spacing: 2px;
   padding: 0.8em 1.2em;
   font-size: 1.5rem;
@@ -725,7 +725,7 @@ body {
 }
 
 .contact__form-btn::before {
-  background-color: #be7a13;
+  background-color: #880a0a;
 }
 
 .footer {
@@ -980,7 +980,7 @@ body {
     font-size: 3.8rem;
   }
   .header {
-    background-image: linear-gradient(215deg, rgba(131, 111, 11, 0.77) 0%, rgba(175, 71, 10, 0.77) 74%), url("../img/second_hero_1920.jpg");
+    background-image: linear-gradient(35deg, rgba(33, 97, 216, 0.75) 0%, rgba(196, 13, 22, 0.75) 79%), url("../img/second_hero_1920.jpg");
     background-attachment: fixed;
   }
   .header__heading {
@@ -1016,7 +1016,7 @@ body {
   }
   .hero-img {
     padding: 22em 2em;
-    background-image: linear-gradient(215deg, rgba(131, 111, 11, 0.77) 0%, rgba(175, 71, 10, 0.77) 74%), url("../img/hero_1920.jpg");
+    background-image: linear-gradient(35deg, rgba(33, 97, 216, 0.75) 0%, rgba(196, 13, 22, 0.75) 79%), url("../img/hero_1920.jpg");
     background-attachment: fixed;
   }
   .hero-img .line {
@@ -1037,7 +1037,7 @@ body {
     font-size: 1.8rem;
   }
   .offers {
-    background-image: linear-gradient(215deg, rgba(131, 111, 11, 0.77) 0%, rgba(175, 71, 10, 0.77) 74%), url("../img/offers_bg_1920.jpg");
+    background-image: linear-gradient(35deg, rgba(33, 97, 216, 0.75) 0%, rgba(196, 13, 22, 0.75) 79%), url("../img/offers_bg_1920.jpg");
     background-attachment: fixed;
   }
   .offers__option {
